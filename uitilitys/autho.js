@@ -9,9 +9,7 @@ exports.isAdmin=(req,res,next)=>{
                 })
             }
             if(user.role==="staff"){
-               return res.status(500).json({
-                    err : "admin access denied"
-                })
+               return res.status(201).send(user)
             }
             next();
         })
