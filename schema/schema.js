@@ -13,6 +13,9 @@ const userschema = new mongoose.Schema({
         type :String,
         require :true
     },
+    number :{
+        type: Number
+    },
     
     role :{
         type :String,

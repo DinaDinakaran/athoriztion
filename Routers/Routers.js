@@ -37,7 +37,7 @@ Router.post("/signin", isAdmin,(req,res)=>{
 
                res.cookie("t",token,{expire: new Date() + 10000})
                const{_id,userName,email,role}=user
-               return res.status(201).send({token,user:{userName,email}})
+               return res.status(201).send(`hello ${userName} sir .. how is it going on your${role}`)
             }
          })
       
