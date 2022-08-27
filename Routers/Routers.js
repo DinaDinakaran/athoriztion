@@ -15,7 +15,7 @@ Router.post("/signup",async(req,res)=>{
             res.status(404).send("this is some error")
             console.log(err)
     }
-    res.status(201).send(data)
+    res.status(201).header("Access-Control-Allow-Origin").send(data)
  })
  }catch(err){
     console.log(err)
@@ -37,7 +37,7 @@ Router.post("/signin", isAdmin,(req,res)=>{
 
                res.cookie("t",token,{expire: new Date() + 10000})
                const{_id,userName,email,role}=user
-               return res.status(201).send(`hello ${userName} sir .. how is it going on your${role}`)
+               return res.status(201).send(`hello HR sir i hope your doing well...☺😋`)
             }
          })
       
