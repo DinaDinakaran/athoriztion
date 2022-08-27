@@ -10,7 +10,9 @@ const router = require("./Routers/Routers")
 app.use(express.json())
 app.use("/api",router)
 
-app.use(cors())
+app.use(cors({
+    origin:"*"
+}))
 
 const port = process.env.PORT
 
