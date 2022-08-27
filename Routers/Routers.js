@@ -15,7 +15,7 @@ Router.post("/signup",async(req,res)=>{
             res.status(404).send("this is some error")
             console.log(err)
     }
-    res.status(201).header("Access-Control-Allow-Origin").send(data)
+    res.status(201).header({"Access-Control-Allow-Origin : *"}).send(data)
  })
  }catch(err){
     console.log(err)
